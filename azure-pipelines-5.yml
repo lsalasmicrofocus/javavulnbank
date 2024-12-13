@@ -24,7 +24,7 @@ steps:
     FortifyProjects: '$(Pipeline.Workspace)/s'
     FodConnection: LuisFODtenant
     ReleaseOptions: 0
-    ReleaseId: 1337718
+    ReleaseId: 1337781
     EntitlementSelection: 1
     OverrideScanSettings: 2
     InProgressScanActionType: 2
