@@ -1,0 +1,43 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
+pool:
+  name: Azure Pipelines
+#Your build pipeline references an undefined variable named ‘Pipeline.Workspace’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
+
+steps:
+- task: JavaToolInstaller@1
+  displayName: 'Use Java 17'
+  inputs:
+    versionSpec: 17
+    jdkArchitectureOption: x64
+    jdkSourceOption: PreInstalled
+
+- task: fortifyvsts.hpe-security-fortify-vsts.build-task-fortify-on-demand-static.FortifyOnDemandStatic@9
+  displayName: 'Run Fortify on Demand static assessment on $(Pipeline.Workspace)/s'
+  inputs:
+    FortifyProjects: '$(Pipeline.Workspace)/s'
+    FodConnection: LuisFODtenant
+    ReleaseOptions: 0
+    ReleaseId: 1337692
+    EntitlementSelection: 1
+    OverrideScanSettings: 2
+    InProgressScanActionType: 2
+    RemediationScanPreference: 0
+    PolicyFailAction: 0
