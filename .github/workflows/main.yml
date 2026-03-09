@@ -1,5 +1,6 @@
 name: Fortify on Demand Scan
 on:
+  workflow_dispatch:           # <— enables the “Run workflow” butto
   push:
     branches: [main]
   pull_request:
