@@ -15,7 +15,7 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v4   # Set up build tool(s) required to build your project
         with:
-          distribution: 'temurin' # See  'Supported  distributions' for available options
+          distribution: 'temurin' # See  'Supported distributions' for available options
           java-version: '25'
     # permissions:               # When overriding default permissions, following are required:
     #   contents: read           # Required for checkout action
