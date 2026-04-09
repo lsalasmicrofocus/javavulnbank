@@ -39,10 +39,10 @@ jobs:
           FCLI_BOOTSTRAP_VERSION: v3.15  # Optional if you prefer stability over latest
           DO_EXPORT: true
           DO_PACKAGE_DEBUG: true
-          RUNNER_DEBUG: '1'  # Enable GitHub Actions debug logging
-          ACTIONS_STEP_DEBUG: 'true'  # More verbose step output
-          FCLI_LOG_LEVEL: DEBUG  # Enable FCLI debug logging
-          FCLI_LOG_FILE: fcli.log  # Save logs to file
+          # RUNNER_DEBUG: '1'  # Enable GitHub Actions debug logging
+          # ACTIONS_STEP_DEBUG: 'true'  # More verbose step output
+          # FCLI_LOG_LEVEL: DEBUG  # Enable FCLI debug logging
+          # FCLI_LOG_FILE: fcli.log  # Save logs to file
 
 
           # TOOL_DEFINITIONS: https://ftfy.mycompany.com/tool-definitions/v1/tool-definitions.yaml.zip
