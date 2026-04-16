@@ -39,7 +39,7 @@ jobs:
           FCLI_BOOTSTRAP_VERSION: v3.15  # Optional if you prefer stability over latest
           DO_EXPORT: true
           DO_PACKAGE_DEBUG: true
-          CI_ACTION_EXTRA_OPTS: --log-mask=none, --no-ci-summary
+          CI_ACTION_EXTRA_OPTS: --no-ci-summary
           # RUNNER_DEBUG: '1'  # Enable GitHub Actions debug logging
           # ACTIONS_STEP_DEBUG: 'true'  # More verbose step output
           # FCLI_LOG_LEVEL: DEBUG  # Enable FCLI debug logging
