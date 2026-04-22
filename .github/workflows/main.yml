@@ -41,7 +41,6 @@ jobs:
           DO_PACKAGE_DEBUG: true
           CI_ACTION_EXTRA_OPTS: --log-mask=none
           # JOB_SUMMARY_FILE: /dev/null
-          GITHUB_STEP_SUMMARY: /dev/null
           # RUNNER_DEBUG: '1'  # Enable GitHub Actions debug logging
           # ACTIONS_STEP_DEBUG: 'true'  # More verbose step output
           # FCLI_LOG_LEVEL: DEBUG  # Enable FCLI debug logging
